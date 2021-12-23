@@ -32,7 +32,10 @@
                 <div id="profilePictureDiv">
                 </div>
             </div>
-            <div id="loginmessage">Hello! Silakan Login Menggunakan akun LINE anda.</div>
+            <div id="loginmessage">
+                Hello!
+                <p id="displayName"><b>displayName:</b> </p>
+                .</div>
             <img id="pictureUrl">
 			<!-- LOGIN LOGOUT BUTTONS -->
             <div class="buttonGroup">
@@ -247,7 +250,7 @@
       //document.getElementById("picUrl").append(profile.pictureUrl)
       //document.getElementById("userId").append(profile.userId)
       //document.getElementById("statusMessage").append(profile.statusMessage)
-      document.getElementById("loginmessage").append(profile.displayName)
+      document.getElementById("displayName").append(profile.displayName)
 
       //document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
 
