@@ -61,9 +61,23 @@
     }
 
     function openWindow() {
+      liff.openWindow({
+        url:"https://line.me",
+        external:true
+      })
     }
 
     async function getFriendship() {
+      const friend = await liff.getFriendship()
+
+      document.getElementById("friendship").append(friend.friendFlag)
+      if(!friend.friendFlag)
+      {
+        if(confirm("you 're not in bot's friend list. Wanna add friend now?"))
+        {
+          window.location = "https://line.me/R/ti/p/@1653948984"
+        }
+      }
     }
 
     async function sendMsg() {
