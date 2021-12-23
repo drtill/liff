@@ -89,13 +89,13 @@
           alert("Message prepare2")
           try
           {
-            await liff.sendMessages(
+            await liff.sendMessages([
             {
               "type":"sticker",
               "stickerid":1,
               "packageId":1
 
-            })
+            }])
             alert("Message sent")
           }
           catch(err)
