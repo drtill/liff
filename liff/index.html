@@ -82,30 +82,38 @@
 
     async function sendMsg() {
       alert("Message prepare1")
-      if(liff.getContext().type !== "none")
+      try
       {
-        alert("Message prepare2")
-        try
+        if(liff.getContext().type !== "none")
         {
-          await liff.sendMessage(
+          alert("Message prepare2")
+          try
           {
-            "type":"sticker",
-            "stickerid":1,
-            "packageId":1
+            await liff.sendMessage(
+            {
+              "type":"sticker",
+              "stickerid":1,
+              "packageId":1
 
-          })
-          alert("Message sent")
+            })
+            alert("Message sent")
+          }
+          catch(err)
+          {
+            alert("Error : " + err.message)
+          }
+          
         }
-        catch(err)
+        else
         {
-          alert("Error : " + err.message)
+          alert("Message no sent")
         }
-        
       }
-      else
+      catch(err)
       {
-        alert("Message no sent")
+        alert("Error2 : " + err.message)
       }
+      
     }
 
     function getContext() {
