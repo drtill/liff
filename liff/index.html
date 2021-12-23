@@ -84,14 +84,23 @@
       alert("Message prepare1")
       if(liff.getContext().type !== "none")
       {
-        await liff.sendMessage(
+        alert("Message prepare2")
+        try
+        {
+          await liff.sendMessage(
           {
             "type":"sticker",
             "stickerid":1,
             "packageId":1
 
           })
-        alert("Message sent")
+          alert("Message sent")
+        }
+        catch(err)
+        {
+          alert("Error : " + err.message)
+        }
+        
       }
       else
       {
