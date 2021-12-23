@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>BenHok Web App</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<!-- header -->
+		<header id="main-header">
+		<div class="container">
+			<h1><em>BenHok Delivery</em></h1>
+		</div>
+		</header>
+
+		<section id="showcase">
+		<div class="container">
+			<h1><em>fresh japanese food everyday...</em>
+			</h1>
+		</div>
+		</section>
+
+		<section id ="account"><!-- open account section-->
+			<div class="title"><b><em>Akun Anda</em></b></div>
+			<!---profile (hidden)--->
+			<div id="profileInfo" class="hidden">
+                <div id="profilePictureDiv">
+                </div>
+            </div>
+            <div id="loginmessage">Halo! Silakan Login Menggunakan akun LINE anda.</div>
+			<!-- LOGIN LOGOUT BUTTONS -->
+            <div class="buttonGroup">
+                <button id="liffLoginButton">Log in</button>
+                <button id="liffLogoutButton">Log out</button>
+            </div>
+			<!-- Product #1 -->
+			<div class="item">
+		</section> <!-- close account section-->
+
+		<div id="cart"><!-- open cart-->
+			<div class="title"><b><em>Pesanan Anda</em></b></div>
+			<div class="image1">
+				  <!--img src="img/food.jpg" alt="makanan" /-->
+				</div>
+			<!-- Product #1 -->
+			<div class="item">
+				<div class="description">
+					<span>Paket Bento A</span>
+					<span>Nasi, Ebi Furai</span>
+					<span>1 Box</span>
+				</div>
+				<div class="total-price" id="price1">Rp30.000</div>
+
+				<div class="quantity">
+					<button class="quant-btn" id="minus-btn1">-</button>
+					<input type="text" value="0" id="foodquantity">
+					<button class="quant-btn" id="plus-btn1">+</button>
+				</div>
+			</div>
+			<div class="image2">
+				  <!--img src="img/food.jpg" alt="makanan" /-->
+				</div>
+			<!-- Product #2 -->
+			<div class="item">
+				<div class="description">
+					<span>Ocha</span>
+					<span>Teh Jepang</span>
+					<span>1 Gelas</span>
+				</div>
+				<div class="total-price" id="price2">Rp10.000</div>
+
+				<div class="quantity">
+					<button class="quant-btn" id = "minus-btn2">-</button>
+					<input type="text" name="name" value="0" id="drinkquantity">
+					<button class="quant-btn" id = "plus-btn2">+</button>
+
+				</div>
+				
+			</div>
+
+			<div class="order">
+				<button class="order-btn" id="order-btn1">Order</button>
+			</div>
+
+		</section> <!-- close cart-->
+		<!-- </div> -->
+		<footer id="main-footer">
+			<div class="container"></div>
+			<p>Copyright &copy; 2020 Irfan Budi Satria</p>
+			</div>
+		</footer>
+
+		<!--Konten LIFF v2-->
+ 
+        <div id="liffAppContent">
+            <!-- ACTION BUTTONS -->
+            <div class="buttonGroup">
+                <div class="buttonRow">
+                    <button id="openWindowButton" class="smallbtn">Open External Window</button>
+                    <button id="closeWindowButton" class="smallbtn">Close LIFF App</button>
+                </div>
+ 
+            </div>
+ 
+            <!-- LIFF DATA -->
+            <div id="liffData">
+                <table>
+                    <tr>
+                        <th>isInClient : </th>
+                        <td id="isInClient" class="textLeft"></td>
+                    </tr>
+                    <tr>
+                        <th>isLoggedIn : </th>
+                        <td id="isLoggedIn" class="textLeft"></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="statusMessage">
+                <div id="isInClientMessage"></div>
+            </div>
+        </div>
+        <!-- LIFF ID ERROR -->
+        <div id="liffIdErrorMessage" class="hidden">
+            <p>You have not assigned any value for LIFF ID.</p>
+            <p>If you are running the app using Node.js, please set the LIFF ID as an environment variable in your
+                Heroku account follwing the below steps: </p>
+            <code id="code-block">
+                <ol>
+                    <li>Go to `Dashboard` in your Heroku account.</li>
+                    <li>Click on the app you just created.</li>
+                    <li>Click on `Settings` and toggle `Reveal Config Vars`.</li>
+                    <li>Set `MY_LIFF_ID` as the key and the LIFF ID as the value.</li>
+                    <li>Your app should be up and running. Enter the URL of your app in a web browser.</li>
+                </ol>
+            </code>
+            <p>If you are using any other platform, please add your LIFF ID in the <code>index.html</code> file.</p>
+            <p>For more information about how to add your LIFF ID, see <a
+                    href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">Initializing the LIFF
+                    app</a>.</p>
+        </div>
+        <!-- LIFF INIT ERROR -->
+        <div id="liffInitErrorMessage" class="hidden">
+            <p>Something went wrong with LIFF initialization.</p>
+            <p>LIFF initialization can fail if a user clicks "Cancel" on the "Grant permission" screen, or if an error occurs in the process of <code>liff.init()</code>.
+        </div>
+        <!-- NODE.JS LIFF ID ERROR -->
+        <div id="nodeLiffIdErrorMessage" class="hidden">
+            <p>Unable to receive the LIFF ID as an environment variable.</p>
+        </div>
+
+		<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+		<script src="liff-starter.js"></script>
+		<script src="main.js"></script>
+	</body>
+
+</html>	
