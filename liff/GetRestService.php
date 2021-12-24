@@ -27,7 +27,7 @@
    
     	$json = curl_exec($curl);
     
-    	//echo 'Json = ' . $json;
+    	echo 'Json = ' . $json;
     	if($json === FALSE)
     	{
       		die(curl_error($curl));
