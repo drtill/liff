@@ -303,7 +303,7 @@
     function getOrder()
     {
         //alert("Get Order1")
-        var itemJson = '{"CompanyId":2,"UserId":"U5bcb2afaf17c20551ab5afdcfec5c1d3"}' 
+        var itemJson = '{"CompanyId":"2","UserId":"U5bcb2afaf17c20551ab5afdcfec5c1d3"}' 
         try
         {
           //alert("Will Async")
@@ -311,8 +311,8 @@
           {
 
             var data = JSON.stringify({
-              "CompanyId": 2,
-              "UserId": "U5bcb2afaf17c20551ab5afdcfec5c1d3"
+              'CompanyId': '2',
+              'UserId': "U5bcb2afaf17c20551ab5afdcfec5c1d3"
             });
 
             var xmlhttp = new XMLHttpRequest();
