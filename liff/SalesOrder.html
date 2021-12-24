@@ -290,7 +290,8 @@
         try
         {
           alert("Will Async")
-          const userAction = async () => {
+          const userAction = async () => 
+          {
             
 
             alert("Will Send")
@@ -302,12 +303,13 @@
                     'Content-Type': 'application/json',
                     'x-security-lock':'0241CCFF2D40AF7AF8A4FC02272C47A30D15DBDFB36E3266D1296212574F328E'
                     }
-                });
+            });
                 alert("Send")
                 const myJson = await response.json(); //extract JSON from the http response
                 alert(myJson);
                 // do something with myJson
-            } 
+          }
+          alert("Asynced") 
         }
         catch(err)
         {
