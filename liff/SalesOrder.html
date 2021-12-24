@@ -3,6 +3,7 @@
 <html>
 	<head>
 		<title>CoinPOS Liff App</title>
+    <script src="jquery-3.5.1.min.js"></script>
     <script>
       document.write('<link rel="stylesheet" href="css/style.css?cache=' + new Date().getTime() + '">')
   </script>
@@ -294,6 +295,9 @@
           {
             alert("Will Send")
 
+            //xhttp.open("POST", "https://0c3e-2001-fb1-c5-8ead-f852-9364-92f3-3c98.ap.ngrok.io/Services/ServiceContract.svc/JackCloudPOS/Api/GetLiffOrder", true);
+            //xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            //xhttp.send("fname=Henry&lname=Ford");
             $.ajax({
                 type: "POST",
                 url: "https://0c3e-2001-fb1-c5-8ead-f852-9364-92f3-3c98.ap.ngrok.io/Services/ServiceContract.svc/JackCloudPOS/Api/GetLiffOrder",
@@ -303,24 +307,15 @@
                 contentType: "application/json;",
                 success: function (data) {
                   alert("success")  
-                  /*isJustCreateOrder = true;
-                    currentOrderId = data.OrderId;
-                    isSuccess = true;
-                    _orderId = data.OrderId;
-
-                    $('#askToCreateOrderModal').modal('hide');
-
-                    $('#cartDiv').append('<div></div>');
-                    $("#alertCreateOrderSuccess").show();*/
+                  
                 },
                 error: function () {
                   alert("Error")
-                    //$('#loadingModal').modal('hide');
-                    //$('#alertFail').show();
+                  
                 },
                 complete: function () {
                   alert("Complete")
-                  //$('#loadingModal').modal('hide');
+                  
                 }
             });
             /*const userAction = async () => 
