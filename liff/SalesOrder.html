@@ -424,7 +424,7 @@
             //xhttp.send("fname=Henry&lname=Ford");
             $.ajax({
                 type: "POST",
-                url: "https://0c3e-2001-fb1-c5-8ead-f852-9364-92f3-3c98.ap.ngrok.io/Services/ServiceContract.svc/JackCloudPOS/Api/GetLiffOrder",
+                url: "http://coinpos-prod.azurewebsites.net/Services/ServiceContract.svc/JackCloudPOS/Api/GetCountry",
                 dataType: "JSON",
                 beforeSend: function (xhr) { xhr.setRequestHeader('x-security-lock', '0241CCFF2D40AF7AF8A4FC02272C47A30D15DBDFB36E3266D1296212574F328E'); },
                 //data: JSON.stringify(Data),
