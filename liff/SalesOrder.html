@@ -334,8 +334,15 @@
                 xmlhttp.setRequestHeader("Content-Type", "application/json");
                 //xmlhttp.setRequestHeader("x-security-lock', '0241CCFF2D40AF7AF8A4FC02272C47A30D15DBDFB36E3266D1296212574F328E");
                 
+                try
+                {
+                  xmlhttp.send(itemJson);
+                }
+                catch(err)
+                {
+                  alert("Error3 : " + err.message)
+                }
                 
-                xmlhttp.send(itemJson);
 
 
 
