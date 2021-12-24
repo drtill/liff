@@ -532,6 +532,18 @@
         return 401
       }*/
     }
+    function getService()
+    {
+      var requestOptions = {
+        method: 'POST',
+        redirect: 'follow'
+      };
+
+      fetch("https://0c3e-2001-fb1-c5-8ead-f852-9364-92f3-3c98.ap.ngrok.io/Services/ServiceContract.svc/JackCloudPOS/Api/GetLiffOrder", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+    }
 
     async function main() {
       alert("LINE Developers CoinPOS")
