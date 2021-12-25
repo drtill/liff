@@ -542,10 +542,10 @@
           withCredentials: true
       },
       dataType: "JSON",
-                beforeSend: function (xhr) { xhr.setRequestHeader('x-security-lock', '0241CCFF2D40AF7AF8A4FC02272C47A30D15DBDFB36E3266D1296212574F328E'); },
+      beforeSend: function (xhr) { xhr.setRequestHeader('x-security-lock', '0241CCFF2D40AF7AF8A4FC02272C47A30D15DBDFB36E3266D1296212574F328E'); },
                 //data: JSON.stringify(Data),
-                contentType: "application/json;",
-                success: function (data) {
+      contentType: "application/json;",
+      success: function (data) {
                   alert("success")  
                   
                 },
@@ -558,7 +558,7 @@
                   
                 }
       
-      )
+              });
       /*var requestOptions = {
         method: 'POST',
         headers: 
