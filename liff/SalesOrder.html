@@ -535,7 +535,27 @@
     }
     function getService()
     {
-      $.ajax({
+      var xhr = new XMLHttpRequest();
+            //xhr.withCredentials = true;
+
+            //xhr.addEventListener("readystatechange", function() {
+            //  if(this.readyState === 4) {
+            //    console.log(this.responseText);
+            //  }
+            //});
+            xhr.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                alert(this.responseText)
+                //document.getElementById("demo").innerHTML = this.responseText;
+              }
+            };
+
+            xhr.open("POST", "https://f030-2001-fb1-c5-8ead-99f7-8a2b-e037-29e5.ap.ngrok.io/Test/GetAll", true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.setRequestHeader("x-security-lock", "0241CCFF2D40AF7AF8A4FC02272C47A30D15DBDFB36E3266D1296212574F328E");
+
+            xhr.send(data);
+      /*$.ajax({
       type: 'post',
       url: 'https://f030-2001-fb1-c5-8ead-99f7-8a2b-e037-29e5.ap.ngrok.io/Services/ServiceContract.svc/JackCloudPOS/Api/GetLiffOrder',
       xhrFields: {
@@ -558,7 +578,7 @@
                   
                 }
       
-              });
+              });*/
       /*var requestOptions = {
         method: 'POST',
         headers: 
