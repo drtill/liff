@@ -547,9 +547,20 @@
       };
 
       fetch("https://f030-2001-fb1-c5-8ead-99f7-8a2b-e037-29e5.ap.ngrok.io/Test/GetAll", requestOptions)
-        .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
+        .then(
+          response => 
+          {
+            alert(response.text())
+          }
+          )
+        .then(result => 
+          {
+            alert(result)
+          })
+        .catch(error => 
+        {
+          alert('error'+ error) 
+        });
     }
 
     async function main() {
